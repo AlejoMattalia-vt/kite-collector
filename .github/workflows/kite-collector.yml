@@ -298,6 +298,7 @@ jobs:
           gpg --batch --yes --clearsign --digest-algo SHA256 -u 79847F85E3FF6E43 -o InRelease Release
           gpg --batch --yes --detach-sign --digest-algo SHA256 -u 79847F85E3FF6E43 -o Release.gpg Release
 
+          
           # 7. Exportar clave pública al raíz del deployment
           cd ../..
           gpg --armor --export 79847F85E3FF6E43 > repository.key
@@ -308,4 +309,3 @@ jobs:
           branch: gh-pages
           folder: public
 
-          
